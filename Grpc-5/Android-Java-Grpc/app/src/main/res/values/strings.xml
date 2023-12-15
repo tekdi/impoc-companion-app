@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HelloWorldGrpc</string>
+    <string name="get_files_to_upload">Get Files To Upload</string>
+    <string name="download_files">Download Files</string>
+    <string name="get_files_to_download">Get Files To Download</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="no_files_to_upload">No files to upload</string>
+    <string name="upload_files">Upload Files</string>
+    <string name="download_server_ip">3.110.143.240</string>
+    <string name="download_server_port">50051</string>
+    <string name="upload_server_ip">65.2.123.74</string>
+    <string name="upload_server_port">50052</string>
+</resources>

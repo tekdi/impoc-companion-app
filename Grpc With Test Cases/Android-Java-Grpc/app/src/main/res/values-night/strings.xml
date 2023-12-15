@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_files_to_upload">Get Files To Upload</string>
+    <string name="download_files">Download Files</string>
+    <string name="get_files_to_download">Get Files To Download</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="no_files_to_upload">No files to upload</string>
+    <string name="upload_files">Upload Files</string>
+</resources>

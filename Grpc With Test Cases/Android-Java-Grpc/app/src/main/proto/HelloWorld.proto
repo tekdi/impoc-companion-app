@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.helloworldgrpc";
+
+option java_outer_classname = "HelloWorldProto";
+
+message FileRequest {
+  string filename = 1;
+}
+
+message FileResponse {
+  bytes content = 1;
+}
+
+message Reply {
+  string message = 1;
+}
+
+message Chunk {
+  bytes buffer = 1;
+}
+
+message FileList {
+  repeated string fileName = 3;
+}
+
+message HelloRequest{
+  string name = 1;
+}
+
+message HelloReply{
+  string message = 1;
+}
+
+message EmptyRequest {}
+
+service Greeter {
+//  rpc Upload_File(stream FileRequest) returns (Reply);
+  rpc UploadFile(stream Chunk) returns(Reply);
+  rpc DownloadFile(FileRequest) returns(stream Chunk);
+  rpc getFilesToDownload(EmptyRequest) returns(FileList);
+  rpc sayHello(HelloRequest) returns(HelloReply);
+}

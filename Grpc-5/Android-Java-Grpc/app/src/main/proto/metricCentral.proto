@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.helloworldgrpc";
+
+option java_outer_classname = "HelloWorldProtoMetric";
+
+
+message FileRequestMetric {
+  string filename = 1;
+}
+
+message FileResponseMetric {
+  bytes content = 1;
+}
+
+message ReplyMetric {
+  string message = 1;
+}
+
+message ChunkMetric {
+  bytes buffer = 1;
+}
+
+message FileListMetric {
+  repeated string fileName = 3;
+}
+
+message HelloRequestMetric{
+  string name = 1;
+}
+
+message HelloReplyMetric{
+  string message = 1;
+}
+message EmptyRequestMetric{}
+service FileService {
+
+  rpc UploadFileMetric(stream ChunkMetric) returns(ReplyMetric);
+
+  rpc sayHelloMetric(HelloRequestMetric) returns(HelloReplyMetric);
+}
